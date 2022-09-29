@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Layout Project</string>
+    <string name="this_is_my_layout_project">This Is my layout project</string>
+    <string name="button_3">BUTTON 3</string>
+    <string name="button_1">BUTTON 1</string>
+    <string name="button_2">BUTTON 2</string>
+    <string name="check_box_1">Check Box 1</string>
+    <string name="check_box_2">Check Box 2</string>
+    <string name="check_box_3">Check Box 3</string>
+    <string name="check_box_4">Check Box 4</string>
+    <string name="check_box_5">Check Box 5</string>
+    <string name="check_box_6">Check Box 6</string>
+    <string name="a_picture_of_a_smiley_face_emoji_with_thumb_up">A picture of a smiley face emoji with thumb up.</string>
+</resources>
