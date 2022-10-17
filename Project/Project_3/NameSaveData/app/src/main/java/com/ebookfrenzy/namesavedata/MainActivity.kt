@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, MainFragment.newInstance())
                 .commitNow()
-            Log.i(TAG,"onCreate-MainActivity")
+//            Log.i(TAG,"onCreate-MainActivity")
         }
     }
 }

@@ -30,29 +30,37 @@ class MainFragment : Fragment() {
     ): View {
 //        return inflater.inflate(R.layout.fragment_main, container, false)
         _binding = FragmentMainBinding.inflate(inflater, container, false)
-        Log.i(TAG, "onCreateView-MainFragment")
+//        Log.i(TAG, "onCreateView-MainFragment")
         return binding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-        Log.i(TAG, "onDestroyView-MainFragment")
+//        Log.i(TAG, "onDestroyView-MainFragment")
     }
 
     @SuppressLint("SetTextI18n")
+    /*
+    Replaced the onCreate the program added with onActivityCreated due to error
+    where the binding var is null resulting in null pointer exception at runtime
+    on line 25.
+     */
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
-        // TODO: Use the ViewModel
 //        Log.i(TAG, "The value in the getList method is: " + viewModel.getList())
 //        Log.i(TAG, "nameField value is: " + binding.nameField.text)
 //        Log.i(TAG, "onCreate called accessing displayNameField through binding")
 
-        binding.displayNameField.text = viewModel.getList() //This Line is needed to redraw
-        // the name if device is rotated
+
+        if(viewModel.getList().isNotEmpty()) {
+            binding.displayNameField.text = viewModel.getList() //This Line is needed to redraw
+            // the name if device is rotated
+        }
+
 
 //        Log.i(TAG, "onCreate called finished accessing displayNameField through binding")
 
@@ -61,10 +69,10 @@ class MainFragment : Fragment() {
                 viewModel.setName(binding.nameField.text.toString())
                 viewModel.addName()
                 binding.displayNameField.text = viewModel.getList()
-                Log.i(TAG, "onCreate-MainFragment")
+//                Log.i(TAG, "onCreate-MainFragment")
             }else{
                 binding.displayNameField.text = "Invalid Name"
-                Log.i(TAG, "onCreate-MainFragment")
+//                Log.i(TAG, "onCreate-MainFragment")
             }
         }
     }

@@ -12,7 +12,7 @@ class MainViewModel : ViewModel() {
 
     fun setName(name: String){
         this.name = name
-        Log.i(TAG, "setName: $name")
+//        Log.i(TAG, "setName: $name")
     }
 
     fun addName(){
@@ -22,7 +22,7 @@ class MainViewModel : ViewModel() {
     }
 
     fun getList(): String {
-        Log.i(TAG, "getList-MainViewModel:" + this.nameList + ":")
+//        Log.i(TAG, "getList-MainViewModel:" + this.nameList + ":")
         return this.nameList
     }
 }
