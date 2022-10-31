@@ -1,22 +1,14 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt' //require in order to process data binding annotation
 }
 
-
-
 android {
-    buildFeatures {
-//        viewBinding true
-        dataBinding true
-    }
-
-    namespace 'com.ebookfrenzy.myapplication'
+    namespace 'com.ebookfrenzy.lifecycledemo'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.ebookfrenzy.myapplication"
+        applicationId "com.ebookfrenzy.lifecycledemo"
         minSdk 26
         targetSdk 33
         versionCode 1
@@ -37,6 +29,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    buildFeatures{
+        viewBinding true
     }
 }
 

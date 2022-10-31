@@ -18,6 +18,7 @@ class MainViewModel : ViewModel() {
                 nameList.value = nameList.value + it.value + "\n"
             }else{
 //                nameList.value = ""
+                name.value = "Invalid name try again"
             }
         }
     }
