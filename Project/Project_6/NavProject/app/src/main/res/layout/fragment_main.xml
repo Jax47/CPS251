@@ -11,10 +11,11 @@
         android:id="@+id/first_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="12dp"
         android:text="@string/display_image_1"
+        app:layout_constraintBottom_toBottomOf="@+id/first_Image"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/first_Image"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,47 +23,49 @@
         android:id="@+id/ssecond_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="12dp"
         android:text="@string/display_image_2"
         app:layout_constraintBottom_toBottomOf="@+id/second_Image"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/second_Image"
         app:layout_constraintTop_toBottomOf="@+id/first_btn"
-        app:layout_constraintVertical_bias="0.769" />
+        app:layout_constraintVertical_bias="0.785" />
 
     <Button
         android:id="@+id/third_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="225dp"
+        android:layout_marginEnd="12dp"
         android:text="@string/display_image_3"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/third_Image"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/third_Image"
         app:layout_constraintTop_toBottomOf="@+id/ssecond_btn"
-        app:layout_constraintVertical_bias="0.805" />
+        app:layout_constraintVertical_bias="0.829" />
 
     <ImageView
         android:id="@+id/first_Image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="94dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="109dp"
         android:contentDescription="@string/a_droid_with_a_drill"
         android:src="@drawable/android_image_1"
         app:layout_constraintEnd_toStartOf="@+id/first_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/second_Image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="61dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="109dp"
         android:contentDescription="@string/a_droid_wearing_a_wifi_signal"
         android:src="@drawable/android_image_2"
@@ -75,14 +78,22 @@
         android:id="@+id/third_Image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginStart="25dp"
         android:layout_marginEnd="109dp"
+        android:layout_marginBottom="8dp"
         android:contentDescription="@string/a_droid_carrying_a_wrench"
         android:src="@drawable/android_image_3"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/third_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/second_Image"
         app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.91" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

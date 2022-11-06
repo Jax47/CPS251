@@ -23,7 +23,7 @@
         <argument
             android:name="arg_Title"
             app:argType="string"
-            android:defaultValue="Unknown Title" />
+            android:defaultValue="Unknown Title"/>
         <argument
             android:name="main_image"
             app:argType="integer"

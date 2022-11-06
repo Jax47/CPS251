@@ -34,14 +34,15 @@ class MainFragment : Fragment() {
         binding.firstBtn.setOnClickListener{
             val action: MainFragmentDirections.MainToSecond = MainFragmentDirections.mainToSecond()
 
-            action.argTitle = "Image 1"
+            action.setArgTitle("Image 1")
 
             Log.i(TAG, "Args: ${action.argTitle}")
 
             action.mainImage = R.drawable.android_image_1
 
             Navigation.findNavController(it).navigate(
-                R.id.mainToSecond
+                action
+//                R.id.mainToSecond
             )
         }
 
@@ -54,7 +55,9 @@ class MainFragment : Fragment() {
             Log.i(TAG, "Args: ${action.argTitle}, ${action.mainImage}")
 
             Navigation.findNavController(it).navigate(
-                R.id.mainToSecond
+                action
+//                R.id.mainToSecond
+
             )
         }
 
@@ -67,7 +70,8 @@ class MainFragment : Fragment() {
             Log.i(TAG, "Args: ${action.argTitle}, ${action.mainImage}")
 
             Navigation.findNavController(it).navigate(
-                R.id.mainToSecond
+                action
+//                R.id.mainToSecond
             )
         }
     }
