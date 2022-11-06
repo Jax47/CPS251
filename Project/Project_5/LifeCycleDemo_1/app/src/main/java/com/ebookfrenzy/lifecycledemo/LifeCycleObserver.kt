@@ -3,7 +3,6 @@ package com.ebookfrenzy.lifecycledemo
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
-import com.ebookfrenzy.lifecycledemo.databinding.FragmentMainBinding
 import com.ebookfrenzy.lifecycledemo.ui.main.MainViewModel
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -20,7 +19,7 @@ class LifeCycleObserver: LifecycleEventObserver {
     }
 
     fun addObservation(observationN: String) {
-        this.observation + observationN
+        this.observation = observationN
         mainView.updateObs(observationN)
     }
 

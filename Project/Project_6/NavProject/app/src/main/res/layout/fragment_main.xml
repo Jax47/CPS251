@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <Button
+        android:id="@+id/first_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/display_image_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/first_Image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ssecond_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:text="@string/display_image_2"
+        app:layout_constraintBottom_toBottomOf="@+id/second_Image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/second_Image"
+        app:layout_constraintTop_toBottomOf="@+id/first_btn"
+        app:layout_constraintVertical_bias="0.769" />
+
+    <Button
+        android:id="@+id/third_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="225dp"
+        android:text="@string/display_image_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/third_Image"
+        app:layout_constraintTop_toBottomOf="@+id/ssecond_btn"
+        app:layout_constraintVertical_bias="0.805" />
+
+    <ImageView
+        android:id="@+id/first_Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="109dp"
+        android:contentDescription="@string/a_droid_with_a_drill"
+        android:src="@drawable/android_image_1"
+        app:layout_constraintEnd_toStartOf="@+id/first_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/second_Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="109dp"
+        android:contentDescription="@string/a_droid_wearing_a_wifi_signal"
+        android:src="@drawable/android_image_2"
+        app:layout_constraintEnd_toStartOf="@+id/ssecond_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_Image"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/third_Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="109dp"
+        android:contentDescription="@string/a_droid_carrying_a_wrench"
+        android:src="@drawable/android_image_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/third_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_Image"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

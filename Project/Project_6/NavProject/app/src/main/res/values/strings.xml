@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NavProject</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="here_lie_the_title">Here lie the title</string>
+    <string name="placeholder_image">Placeholder Image</string>
+    <string name="display_image_3">Display Image 3</string>
+    <string name="display_image_1">Display Image 1</string>
+    <string name="display_image_2">Display Image 2</string>
+    <string name="a_droid_with_a_drill">A droid with a drill</string>
+    <string name="a_droid_wearing_a_wifi_signal">A droid wearing a wifi signal</string>
+    <string name="a_droid_carrying_a_wrench">A droid carrying a wrench</string>
+</resources>
